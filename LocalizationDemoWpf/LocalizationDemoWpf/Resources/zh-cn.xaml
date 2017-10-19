@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:LocalizationDemoWpf">
+    <system:String x:Key="SwitchLanguage">切换语言</system:String>
+    <system:String x:Key="Chinese">中文</system:String>
+    <system:String x:Key="English">英文</system:String>
+    <system:String x:Key="Username">用户名</system:String>
+    <system:String x:Key="Sex">性别</system:String>
+    <system:String x:Key="Address">地址</system:String>
+</ResourceDictionary>
