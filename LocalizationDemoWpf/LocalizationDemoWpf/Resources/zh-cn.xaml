@@ -8,4 +8,5 @@
     <system:String x:Key="Username">用户名</system:String>
     <system:String x:Key="Sex">性别</system:String>
     <system:String x:Key="Address">地址</system:String>
+    <SolidColorBrush x:Key="Background" Color="#88FF0000"/>
 </ResourceDictionary>
