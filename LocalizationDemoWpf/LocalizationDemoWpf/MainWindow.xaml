@@ -4,14 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LocalizationDemoWpf"
-        mc:Ignorable="d"
+        mc:Ignorable="d"   
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
         Title="MainWindow" Height="350" Width="525">
-
+    <Window.Resources>
+        <system:String x:Key="StringToReplace">Replace</system:String>
+    </Window.Resources>
     <Grid Background="{DynamicResource Background}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <ComboBox Margin="5" SelectedIndex="0" x:Name="LanguageComboBox">
             <ComboBoxItem Content="{DynamicResource Chinese}"/>
@@ -50,5 +54,6 @@
                 </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Grid.Row="3" Margin="5" Content="{DynamicResource StringToReplace}" Click="OnReplaceString"/>
     </Grid>
 </Window>

@@ -27,6 +27,8 @@ namespace LocalizationDemoWpf
             LanguageComboBox.SelectionChanged += OnSelectedLanguageChanged;
         }
 
+        private int _totalReplace;
+
         private void OnSelectedLanguageChanged(object sender, SelectionChangedEventArgs e)
         {
             var culture = LanguageComboBox.SelectedIndex == 0 ? "zh-cn" : "en-us";
@@ -41,6 +43,13 @@ namespace LocalizationDemoWpf
             var message = TryFindResource("SwitchLanguage") as string;
             if (string.IsNullOrWhiteSpace(message) == false)
                 MessageBox.Show(message);
+        }
+
+        private void OnReplaceString(object sender, RoutedEventArgs e)
+        {
+            _totalReplace++;
+            string content = "Replace " + _totalReplace;
+            this.Resources["StringToReplace"] = content;
         }
     }
 }

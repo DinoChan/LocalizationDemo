@@ -4,50 +4,40 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LocalizationDemoWpfUsingResource"
+        xmlns:properties="clr-namespace:LocalizationDemoWpfUsingResource.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid Background="{DynamicResource Background}">
+    <Window.Resources>
+        <local:Resource x:Key="Resource"/>
+    </Window.Resources>
+    <Grid Background="{Binding Source={StaticResource R},Path=Resource.Background}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <ComboBox Margin="5" SelectedIndex="0" x:Name="LanguageComboBox">
-            <ComboBoxItem Content="{DynamicResource Chinese}"/>
-            <ComboBoxItem Content="{DynamicResource English}"/>
+            <ComboBoxItem Content="{Binding Resource.Chinese, Source={StaticResource R}}"/>
+            <ComboBoxItem Content="{Binding Resource.English, Source={StaticResource R }}"/>
         </ComboBox>
 
         <DataGrid Grid.Row="1" Margin="5">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="{DynamicResource Username}"/>
-                <DataGridTextColumn Header="{DynamicResource Sex}"/>
-                <DataGridTextColumn Header="{DynamicResource Address}" Width="*"/>
+                <DataGridTextColumn Header="{Binding Resource.Username, Source={StaticResource R}}"/>
+                <DataGridTextColumn Header="{Binding Resource.Sex, Source={StaticResource R}}"/>
+                <DataGridTextColumn Header="{Binding Resource.Address, Source={StaticResource R}}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid Grid.Row="2" Margin="5">
             <DataGrid.Columns>
-                <DataGridTextColumn >
-                    <DataGridTextColumn.HeaderTemplate>
-                        <DataTemplate >
-                            <TextBlock Text="{DynamicResource Username}"/>
-                        </DataTemplate>
-                    </DataGridTextColumn.HeaderTemplate>
-                </DataGridTextColumn>
-                <DataGridTextColumn >
-                    <DataGridTextColumn.HeaderTemplate>
-                        <DataTemplate >
-                            <TextBlock Text="{DynamicResource Sex}"/>
-                        </DataTemplate>
-                    </DataGridTextColumn.HeaderTemplate>
-                </DataGridTextColumn>
-                <DataGridTextColumn Width="*">
-                    <DataGridTextColumn.HeaderTemplate>
-                        <DataTemplate >
-                            <TextBlock Text="{DynamicResource Address}"/>
-                        </DataTemplate>
-                    </DataGridTextColumn.HeaderTemplate>
-                </DataGridTextColumn>
+                <DataGridTextColumn Header="{Binding Username, Source={StaticResource Resource}}"/>
+                <DataGridTextColumn Header="{x:Static local:Resource.Username}"/>
+                <DataGridTextColumn Header="{Binding Sex, Source={StaticResource Resource}}"/>
+                <DataGridTextColumn Header="{Binding Address, Source={StaticResource Resource}}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <Button Grid.Row="3" Margin="5" Content="{Binding Source={StaticResource R},Path=Resource.StringToReplace}" Click="OnReplaceString"/>
     </Grid>
 </Window>

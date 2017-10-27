@@ -22,14 +22,14 @@ namespace LocalizationDemoWpfUsingResource {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resource {
+    public class Label {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resource() {
+        internal Label() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace LocalizationDemoWpfUsingResource {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LocalizationDemoWpfUsingResource.Resources.Resource", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LocalizationDemoWpfUsingResource.Label", typeof(Label).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,78 +57,6 @@ namespace LocalizationDemoWpfUsingResource {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Address 的本地化字符串。
-        /// </summary>
-        public static string Address {
-            get {
-                return ResourceManager.GetString("Address", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 #880000FF 的本地化字符串。
-        /// </summary>
-        public static string Background {
-            get {
-                return ResourceManager.GetString("Background", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Chinese 的本地化字符串。
-        /// </summary>
-        public static string Chinese {
-            get {
-                return ResourceManager.GetString("Chinese", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 English 的本地化字符串。
-        /// </summary>
-        public static string English {
-            get {
-                return ResourceManager.GetString("English", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Sex 的本地化字符串。
-        /// </summary>
-        public static string Sex {
-            get {
-                return ResourceManager.GetString("Sex", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Replace 的本地化字符串。
-        /// </summary>
-        public static string StringToReplace {
-            get {
-                return ResourceManager.GetString("StringToReplace", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 SwitchLanguage 的本地化字符串。
-        /// </summary>
-        public static string SwitchLanguage {
-            get {
-                return ResourceManager.GetString("SwitchLanguage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Username 的本地化字符串。
-        /// </summary>
-        public static string Username {
-            get {
-                return ResourceManager.GetString("Username", resourceCulture);
             }
         }
     }
