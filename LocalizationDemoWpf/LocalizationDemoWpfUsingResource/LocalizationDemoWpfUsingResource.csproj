@@ -61,10 +61,13 @@
       <DependentUpon>Label.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="Resources\Resource.Designer.cs">
+    <Compile Include="Resources\Labels.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
+      <DependentUpon>Labels.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UsingDllView.xaml.cs">
+      <DependentUpon>UsingDllView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -78,6 +81,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UsingDllView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -101,12 +108,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Resource.resx">
+    <EmbeddedResource Include="Resources\Labels.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
       <CustomToolNamespace>LocalizationDemoWpfUsingResource</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Resource.zh-cn.resx" />
+    <EmbeddedResource Include="Resources\Labels.zh-cn.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,6 +122,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\LocalizationDemoWpfUsingResource.Resource\LocalizationDemoWpfUsingResource.Resource.csproj">
+      <Project>{06b357ca-6356-424e-a434-46f2f095fcf1}</Project>
+      <Name>LocalizationDemoWpfUsingResource.Resource</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

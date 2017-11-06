@@ -52,4 +52,6 @@ namespace LocalizationDemoWpf
             this.Resources["StringToReplace"] = content;
         }
     }
+
+
 }

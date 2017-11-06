@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Globalization;
 
-namespace LocalizationDemoWpfUsingResource
+namespace LocalizationDemoWpfUsingResource.Resource
 {
     public class ApplicationResources : INotifyPropertyChanged
     {

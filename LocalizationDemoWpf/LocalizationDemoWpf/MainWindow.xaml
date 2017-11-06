@@ -10,50 +10,59 @@
     <Window.Resources>
         <system:String x:Key="StringToReplace">Replace</system:String>
     </Window.Resources>
-    <Grid Background="{DynamicResource Background}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <ComboBox Margin="5" SelectedIndex="0" x:Name="LanguageComboBox">
-            <ComboBoxItem Content="{DynamicResource Chinese}"/>
-            <ComboBoxItem Content="{DynamicResource English}"/>
-        </ComboBox>
+    <TabControl>
+        <TabItem Header="基本">
+            <Grid Background="{DynamicResource Background}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ComboBox Margin="5" SelectedIndex="0" x:Name="LanguageComboBox">
+                    <ComboBoxItem Content="{DynamicResource Chinese}"/>
+                    <ComboBoxItem Content="{DynamicResource English}"/>
+                </ComboBox>
 
-        <DataGrid Grid.Row="1" Margin="5">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="{DynamicResource Username}"/>
-                <DataGridTextColumn Header="{DynamicResource Sex}"/>
-                <DataGridTextColumn Header="{DynamicResource Address}" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <DataGrid Grid.Row="2" Margin="5">
-            <DataGrid.Columns>
-                <DataGridTextColumn >
-                    <DataGridTextColumn.HeaderTemplate>
-                        <DataTemplate >
-                            <TextBlock Text="{DynamicResource Username}"/>
-                        </DataTemplate>
-                    </DataGridTextColumn.HeaderTemplate>
-                </DataGridTextColumn>
-                <DataGridTextColumn >
-                    <DataGridTextColumn.HeaderTemplate>
-                        <DataTemplate >
-                            <TextBlock Text="{DynamicResource Sex}"/>
-                        </DataTemplate>
-                    </DataGridTextColumn.HeaderTemplate>
-                </DataGridTextColumn>
-                <DataGridTextColumn Width="*">
-                    <DataGridTextColumn.HeaderTemplate>
-                        <DataTemplate >
-                            <TextBlock Text="{DynamicResource Address}"/>
-                        </DataTemplate>
-                    </DataGridTextColumn.HeaderTemplate>
-                </DataGridTextColumn>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button Grid.Row="3" Margin="5" Content="{DynamicResource StringToReplace}" Click="OnReplaceString"/>
-    </Grid>
+                <DataGrid Grid.Row="1" Margin="5">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="{DynamicResource Username}"/>
+                        <DataGridTextColumn Header="{DynamicResource Sex}"/>
+                        <DataGridTextColumn Header="{DynamicResource Address}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid Grid.Row="2" Margin="5">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn >
+                            <DataGridTextColumn.HeaderTemplate>
+                                <DataTemplate >
+                                    <TextBlock Text="{DynamicResource Username}"/>
+                                </DataTemplate>
+                            </DataGridTextColumn.HeaderTemplate>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn >
+                            <DataGridTextColumn.HeaderTemplate>
+                                <DataTemplate >
+                                    <TextBlock Text="{DynamicResource Sex}"/>
+                                </DataTemplate>
+                            </DataGridTextColumn.HeaderTemplate>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Width="*">
+                            <DataGridTextColumn.HeaderTemplate>
+                                <DataTemplate >
+                                    <TextBlock Text="{DynamicResource Address}"/>
+                                </DataTemplate>
+                            </DataGridTextColumn.HeaderTemplate>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Grid.Row="3" Margin="5" Content="{DynamicResource StringToReplace}" Click="OnReplaceString"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="使用Dll">
+            <local:UsingDllView/>
+        </TabItem>
+    </TabControl>
+  
 </Window>
+

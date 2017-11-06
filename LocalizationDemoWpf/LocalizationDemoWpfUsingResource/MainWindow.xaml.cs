@@ -32,34 +32,36 @@ namespace LocalizationDemoWpfUsingResource
         }
 
         private int _totalReplace;
-        private ExtendResource _extendResourcce;
+        private ExtendLabels _extendLabels;
 
         private void OnSelectedLanguageChanged(object sender, SelectionChangedEventArgs e)
         {
             var culture = LanguageComboBox.SelectedIndex == 0 ? "zh-cn" : "en-us";
             var cultureInfo = new System.Globalization.CultureInfo(culture);
             ApplicationResources.ChangeCulture(cultureInfo);
-            MessageBox.Show(Resource.SwitchLanguage);
+            MessageBox.Show(Labels.SwitchLanguage);
         }
 
         private void OnReplaceString(object sender, RoutedEventArgs e)
         {
             _totalReplace++;
-            string content = Resource.StringToReplace + " " + _totalReplace;
-            if (_extendResourcce == null)
-                _extendResourcce = new ExtendResource();
+            string content = Labels.StringToReplace + " " + _totalReplace;
+            if (_extendLabels == null)
+                _extendLabels = new ExtendLabels();
 
-            _extendResourcce.StringToReplace = content;
-            ApplicationResources.Current.Resource = _extendResourcce;
+            _extendLabels.StringToReplace = content;
+            ApplicationResources.Current.Labels = _extendLabels;
             ApplicationResources.Current.RaiseProoertyChanged();
         }
     }
 
-    public class ExtendResource : Resource
+    public class ExtendLabels : Labels
     {
         /// <summary>
         /// 获取或设置 StringToReplace 的值
         /// </summary>
         public new string StringToReplace { get; set; }
     }
+
+
 }
