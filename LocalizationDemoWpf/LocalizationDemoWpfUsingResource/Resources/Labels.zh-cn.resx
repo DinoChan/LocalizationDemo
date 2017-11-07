@@ -129,6 +129,9 @@
   <data name="English" xml:space="preserve">
     <value>英文</value>
   </data>
+  <data name="Flag" xml:space="preserve">
+    <value>/LocalizationDemoWpfUsingResource;component/Flag_of_the_People's_Republic_of_China.svg.png</value>
+  </data>
   <data name="Sex" xml:space="preserve">
     <value>性别</value>
   </data>

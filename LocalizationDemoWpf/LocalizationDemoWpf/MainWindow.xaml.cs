@@ -37,8 +37,8 @@ namespace LocalizationDemoWpf
             Thread.CurrentThread.CurrentCulture = cultureInfo;
 
 
-            ResourceDictionary dict = new ResourceDictionary { Source = new Uri($@"Resources\{culture}.xaml", UriKind.RelativeOrAbsolute) };
-            Application.Current.Resources.MergedDictionaries[0] = dict;
+            ResourceDictionary dictionary = new ResourceDictionary { Source = new Uri($@"Resources\{culture}.xaml", UriKind.RelativeOrAbsolute) };
+            Application.Current.Resources.MergedDictionaries[0] = dictionary;
 
             var message = TryFindResource("SwitchLanguage") as string;
             if (string.IsNullOrWhiteSpace(message) == false)
@@ -49,7 +49,7 @@ namespace LocalizationDemoWpf
         {
             _totalReplace++;
             string content = "Replace " + _totalReplace;
-            this.Resources["StringToReplace"] = content;
+            Resources["StringToReplace"] = content;
         }
     }
 

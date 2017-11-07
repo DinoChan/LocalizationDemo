@@ -97,6 +97,15 @@ namespace LocalizationDemoWpfUsingResource {
         }
         
         /// <summary>
+        ///   查找类似 /LocalizationDemoWpfUsingResource;component/Flag_of_the_United_States.svg.png 的本地化字符串。
+        /// </summary>
+        public static string Flag {
+            get {
+                return ResourceManager.GetString("Flag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Sex 的本地化字符串。
         /// </summary>
         public static string Sex {

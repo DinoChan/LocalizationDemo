@@ -25,7 +25,7 @@ namespace LocalizationDemoWpfUsingResource.Resource
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public static void ChangeCulture(System.Globalization.CultureInfo cultureInfo)
+        public  void ChangeCulture(System.Globalization.CultureInfo cultureInfo)
         {
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
             Thread.CurrentThread.CurrentCulture = cultureInfo;

@@ -8,6 +8,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/LocalizationDemoWpf;component/Resources/zh-cn.xaml"/>
+                <!--<ResourceDictionary Source="/LocalizationDemoWpf;component/Resources/en-us.xaml"/>-->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

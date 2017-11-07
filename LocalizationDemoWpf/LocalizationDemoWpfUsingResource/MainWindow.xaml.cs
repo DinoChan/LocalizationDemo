@@ -38,7 +38,7 @@ namespace LocalizationDemoWpfUsingResource
         {
             var culture = LanguageComboBox.SelectedIndex == 0 ? "zh-cn" : "en-us";
             var cultureInfo = new System.Globalization.CultureInfo(culture);
-            ApplicationResources.ChangeCulture(cultureInfo);
+            ApplicationResources.Current.ChangeCulture(cultureInfo);
             MessageBox.Show(Labels.SwitchLanguage);
         }
 

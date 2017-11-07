@@ -7,9 +7,7 @@
         xmlns:properties="clr-namespace:LocalizationDemoWpfUsingResource.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Window.Resources>
-        <local:Labels x:Key="Resource"/>
-    </Window.Resources>
+   
     <TabControl>
         <TabItem Header="基本">
 
@@ -20,11 +18,17 @@
                     <RowDefinition/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
                 <ComboBox Margin="5" SelectedIndex="0" x:Name="LanguageComboBox">
                     <ComboBoxItem Content="{Binding Labels.Chinese, Source={StaticResource R}}"/>
                     <ComboBoxItem Content="{Binding Labels.English, Source={StaticResource R }}"/>
                 </ComboBox>
-
+                    <Image Source="{Binding Labels.Flag, Source={StaticResource R }}" Grid.Column="1" Margin="5" Width="50"/>
+                </Grid>
                 <DataGrid Grid.Row="1" Margin="5">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="{Binding Labels.Username, Source={StaticResource R}}"/>
@@ -34,10 +38,9 @@
                 </DataGrid>
                 <DataGrid Grid.Row="2" Margin="5">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="{Binding Username, Source={StaticResource Resource}}"/>
                         <DataGridTextColumn Header="{x:Static local:Labels.Username}"/>
-                        <DataGridTextColumn Header="{Binding Sex, Source={StaticResource Resource}}"/>
-                        <DataGridTextColumn Header="{Binding Address, Source={StaticResource Resource}}" Width="*"/>
+                        <DataGridTextColumn Header="{x:Static local:Labels.Sex}"/>
+                        <DataGridTextColumn Header="{x:Static local:Labels.Address}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
 

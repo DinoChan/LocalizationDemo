@@ -34,7 +34,7 @@ namespace LocalizationDemoWpfUsingResource
 
             var culture = _isEnglish ? "en-us" : "zh-cn";
             var cultureInfo = new System.Globalization.CultureInfo(culture);
-            LocalizationDemoWpfUsingResource.Resource.ApplicationResources.ChangeCulture(cultureInfo);
+            LocalizationDemoWpfUsingResource.Resource.ApplicationResources.Current.ChangeCulture(cultureInfo);
         }
     }
 }
