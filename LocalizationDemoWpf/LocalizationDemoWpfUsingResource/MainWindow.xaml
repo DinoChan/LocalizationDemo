@@ -7,7 +7,9 @@
         xmlns:properties="clr-namespace:LocalizationDemoWpfUsingResource.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-   
+    <Window.Background>
+        <LinearGradientBrush
+    </Window.Background>
     <TabControl>
         <TabItem Header="基本">
 
