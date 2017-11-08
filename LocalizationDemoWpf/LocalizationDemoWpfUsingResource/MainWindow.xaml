@@ -7,9 +7,7 @@
         xmlns:properties="clr-namespace:LocalizationDemoWpfUsingResource.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Window.Background>
-        <LinearGradientBrush
-    </Window.Background>
+    
     <TabControl>
         <TabItem Header="基本">
 
@@ -29,7 +27,7 @@
                     <ComboBoxItem Content="{Binding Labels.Chinese, Source={StaticResource R}}"/>
                     <ComboBoxItem Content="{Binding Labels.English, Source={StaticResource R }}"/>
                 </ComboBox>
-                    <Image Source="{Binding Labels.Flag, Source={StaticResource R }}" Grid.Column="1" Margin="5" Width="50"/>
+                    <Image Source="{Binding Labels.Flag, Source={StaticResource R}}" Grid.Column="1" Margin="5" Width="50"/>
                 </Grid>
                 <DataGrid Grid.Row="1" Margin="5">
                     <DataGrid.Columns>
