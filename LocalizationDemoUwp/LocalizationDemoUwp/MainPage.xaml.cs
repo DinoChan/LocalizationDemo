@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -28,11 +29,21 @@ namespace LocalizationDemoUwp
             var list = new List<string> {"One", "Two", "Three"};
             Source = list;
 
-            var loader = new Windows.ApplicationModel.Resources.ResourceLoader();
-            var str = loader.GetString("CurrentLanguage");
+            //var loader = new Windows.ApplicationModel.Resources.ResourceLoader();
+            //var str = loader.GetString("CurrentLanguadge");
+
         }
 
 
         public IEnumerable<string> Source { get; private set; }
+
+        private void OnShowMessage(object sender, RoutedEventArgs e)
+        {
+          var  loader = ResourceLoader.GetForCurrentView(); 
+           
+           var str = loader.GetString("M");
+             loader = new Windows.ApplicationModel.Resources.ResourceLoader();
+             str = loader.GetString("CusrrsentLnguage");
+        }
     }
 }

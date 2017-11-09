@@ -129,11 +129,17 @@
   <data name="EnglishButton.Content" xml:space="preserve">
     <value>English</value>
   </data>
+  <data name="FirstRow.Height" xml:space="preserve">
+    <value>Auto</value>
+  </data>
   <data name="FlagImage.Source" xml:space="preserve">
     <value>Flag_of_the_United_States.svg.png</value>
   </data>
   <data name="ItemHeader.Text" xml:space="preserve">
     <value>ItemHeader</value>
+  </data>
+  <data name="LastGradientStop.Color" xml:space="preserve">
+    <value>#550000FF</value>
   </data>
   <data name="LayoutRoot.Background" xml:space="preserve">
     <value>#550000FF</value>
@@ -153,7 +159,10 @@
   <data name="SwitchLanguage" xml:space="preserve">
     <value>SwitchLanguage</value>
   </data>
-  <data name="UsernaeTextBox.Header" xml:space="preserve">
+  <data name="UsernameTextBox.Header" xml:space="preserve">
     <value>Username</value>
+  </data>
+  <data name="UsernameTextBox.Width" xml:space="preserve">
+    <value>Auto</value>
   </data>
 </root>
