@@ -106,6 +106,16 @@ namespace LocalizationDemoWpfUsingResource {
         }
         
         /// <summary>
+        ///   查找类似 Open the Control Panel, and select Clock, Language, and Region &gt; Language.
+        ///Note that the language that was displayed when you ran the app is the top language listed that is English, German, or French. If your top language is not one of these three, the app falls back to the next one on the list that the app supports. 的本地化字符串。
+        /// </summary>
+        public static string Infomation {
+            get {
+                return ResourceManager.GetString("Infomation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Sex 的本地化字符串。
         /// </summary>
         public static string Sex {

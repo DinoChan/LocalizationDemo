@@ -17,6 +17,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -45,6 +46,14 @@
                 </DataGrid>
 
                 <Button Grid.Row="3" Margin="5" Content="{Binding Source={StaticResource R},Path=Labels.StringToReplace}" Click="OnReplaceString"/>
+                <TextBlock Text="{Binding Source={StaticResource R},Path=Labels.Infomation}" Grid.Row="4" Margin="5">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="{Binding Source={StaticResource R},Path=Labels.Background}" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
             </Grid>
         </TabItem>
         <TabItem Header="使用Dll">

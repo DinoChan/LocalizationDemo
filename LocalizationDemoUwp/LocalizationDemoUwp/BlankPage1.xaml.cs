@@ -13,26 +13,18 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
+// https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace LocalizationDemoUwp
 {
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class BlankPage1 : Page
     {
-        public MainPage()
+        public BlankPage1()
         {
             this.InitializeComponent();
-            var list = new List<string> {"One", "Two", "Three"};
-            Source = list;
-
-            var loader = new Windows.ApplicationModel.Resources.ResourceLoader();
-            var str = loader.GetString("CurrentLanguage");
         }
-
-
-        public IEnumerable<string> Source { get; private set; }
     }
 }
