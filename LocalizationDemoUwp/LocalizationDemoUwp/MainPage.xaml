@@ -7,38 +7,54 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     >
-
+   
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition x:Uid="FirstRow"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackPanel x:Uid="LayoutRoot" >
-            <TextBox x:Uid="UsernameTextBox" Margin="5" Header="test" />
-            <TextBox x:Uid="UsernameTextBox" Margin="5" Header="test"/>
-            <ToggleSwitch OnContent="test on content" OffContent="test off content" Header="test" Margin="5" x:Uid="SexButton"/>
-            <TextBlock Text="test current language content" x:Uid="CurrentLanguageElement" Margin="5">
-                <TextBlock.Foreground>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop x:Uid="LastGradientStop" Offset="1"/>
-                    </LinearGradientBrush>
-                </TextBlock.Foreground>
-            </TextBlock>
-            <Image Height="100" x:Uid="FlagImage" Margin="5" Width="100" Source="Flag_of_the_United_States.svg.png" HorizontalAlignment="Left"/>
-            <Image Height="100" x:Uid="FlagImage" Margin="5" Width="100" Source="Images/Flag.png" HorizontalAlignment="Left"/>
-            <ListView ItemsSource="{x:Bind Source}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Margin="5">
-                            <TextBlock Text="Test" x:Uid="ItemHeader"/>
-                            <TextBlock Text="{Binding}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Button Margin="5" Content="ShowMessage" Click="OnShowMessage"/>
-            <TextBlock x:Name="MessageElement" Margin="5"/>
-        </StackPanel>
+        <Pivot>
+           
+            <PivotItem Header="Bacis">
+               
+                <ScrollViewer>
+                    <StackPanel x:Uid="LayoutRoot" >
+                        <TextBox x:Uid="UsernameTextBox" Margin="5" Header="test" />
+                        <TextBox x:Uid="UsernameTextBox" Margin="5" Header="test"/>
+                        <ToggleSwitch OnContent="test on content" OffContent="test off content" Header="test" Margin="5" x:Uid="SexButton"/>
+                        <TextBlock Text="test current language content" x:Uid="CurrentLanguageElement" Margin="5">
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black" Offset="0"/>
+                                    <GradientStop x:Uid="LastGradientStop" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <Image Height="100" x:Uid="FlagImage" Margin="5" Width="100" Source="Flag_of_the_United_States.svg.png" HorizontalAlignment="Left"/>
+                        <Image Height="100" x:Uid="FlagImage" Margin="5" Width="100" Source="Images/Flag.png" HorizontalAlignment="Left"/>
+                        <Grid Height="200">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Uid="FirstRow"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <ListView ItemsSource="{x:Bind Source}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="5">
+                                            <TextBlock Text="Test" x:Uid="ItemHeader"/>
+                                            <TextBlock Text="{Binding}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Grid>
+
+                        <Button Margin="5" Content="ShowMessage" Click="OnShowMessage"/>
+                        <TextBlock x:Name="MessageElement" Margin="5"/>
+                        <TextBlock x:Name="MessageFromResourceLibraryElement" Margin="5"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem Header="SwitchLanguage">
+                <local:SwitchLanguageView/>
+            </PivotItem>
+        </Pivot>
+    
     </Grid>
 </Page>

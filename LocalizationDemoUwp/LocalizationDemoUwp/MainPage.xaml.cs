@@ -4,8 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Resources;
+using Windows.ApplicationModel.Resources.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,24 +28,38 @@ namespace LocalizationDemoUwp
         public MainPage()
         {
             this.InitializeComponent();
-            var list = new List<string> {"One", "Two", "Three"};
+            var list = new List<string> { "One", "Two", "Three" };
             Source = list;
-
-            //var loader = new Windows.ApplicationModel.Resources.ResourceLoader();
-            //var str = loader.GetString("CurrentLanguadge");
 
         }
 
+       
 
         public IEnumerable<string> Source { get; private set; }
+     
 
         private void OnShowMessage(object sender, RoutedEventArgs e)
         {
-          var  loader = ResourceLoader.GetForCurrentView(); 
-           
-           var str = loader.GetString("M");
-             loader = new Windows.ApplicationModel.Resources.ResourceLoader();
-             str = loader.GetString("CusrrsentLnguage");
+            // var loader = new Windows.ApplicationModel.Resources.ResourceLoader();
+            //var str = loader.GetString("CurrentLanguadge");
+            var resourceLoader = ResourceLoader.GetForCurrentView();
+            var currentLanguage = resourceLoader.GetString("CurrentLanguage");
+            resourceLoader = ResourceLoader.GetForCurrentView("Resources1");
+            var message = resourceLoader.GetString("Message");
+            MessageElement.Text = message + currentLanguage;
+
+
+            resourceLoader = ResourceLoader.GetForCurrentView("LocalizationDemoUwp.ResourceLibrary/Resources");
+            currentLanguage = resourceLoader.GetString("CurrentLanguage");
+            resourceLoader = ResourceLoader.GetForCurrentView("LocalizationDemoUwp.ResourceLibrary/Resources1");
+            message = resourceLoader.GetString("Message");
+            MessageFromResourceLibraryElement.Text = message + currentLanguage;
+
+
         }
+
+     
     }
+
+  
 }
