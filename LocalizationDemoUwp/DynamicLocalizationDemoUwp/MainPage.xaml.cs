@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +23,44 @@ namespace DynamicLocalizationDemoUwp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public static MainPage Current { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
+            MenuListView.SelectionChanged += MenuListView_SelectionChanged;
+            MenuListView.SelectedIndex = 0;
+            Current = this;
+            RootFrame.Navigated += OnRootFrameNavigated;
         }
+
+        private void OnRootFrameNavigated(object sender, NavigationEventArgs e)
+        {
+            if (e.SourcePageType == typeof(MainView))
+                MenuListView.SelectedIndex = 0;
+            else
+                MenuListView.SelectedIndex = 1;
+
+
+            if (RootFrame.CanGoBack)
+            {
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            }
+            else
+            {
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            }
+        }
+
+      
+
+        private void MenuListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (MenuListView.SelectedIndex == 0)
+                RootFrame.Navigate(typeof(MainView));
+            else
+                RootFrame.Navigate(typeof(SettingView));
+        }
+
+
     }
 }

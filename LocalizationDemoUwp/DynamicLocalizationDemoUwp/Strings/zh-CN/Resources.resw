@@ -117,52 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ChineseButton.Content" xml:space="preserve">
-    <value>中文</value>
-  </data>
-  <data name="CurrentLanguage" xml:space="preserve">
-    <value>中文</value>
-  </data>
-  <data name="CurrentLanguageElement.Text" xml:space="preserve">
-    <value>中文</value>
-  </data>
-  <data name="EnglishButton.Content" xml:space="preserve">
-    <value>英文</value>
-  </data>
-  <data name="FirstRow.Height" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="FlagImage.Source" xml:space="preserve">
-    <value>Flag_of_the_People's_Republic_of_China.svg.png</value>
-  </data>
-  <data name="ItemHeader.Text" xml:space="preserve">
-    <value>项目标题</value>
-  </data>
-  <data name="LastGradientStop.Color" xml:space="preserve">
-    <value>#55FF0000</value>
-  </data>
-  <data name="LayoutRoot.Background" xml:space="preserve">
-    <value>#55FF0000</value>
-  </data>
-  <data name="SexButton.Header" xml:space="preserve">
-    <value>性别</value>
-  </data>
-  <data name="SexButton.OffContent" xml:space="preserve">
-    <value>女</value>
-  </data>
-  <data name="SexButton.OnContent" xml:space="preserve">
-    <value>男</value>
-  </data>
-  <data name="StringToReplace" xml:space="preserve">
-    <value>Replace</value>
-  </data>
-  <data name="SwitchLanguage" xml:space="preserve">
-    <value>切换语言</value>
-  </data>
-  <data name="UsernameTextBox.Header" xml:space="preserve">
-    <value>用户名</value>
-  </data>
-  <data name="UsernameTextBox.Width" xml:space="preserve">
-    <value>100</value>
+  <data name="MainTitle.Text" xml:space="preserve">
+    <value>欢迎</value>
   </data>
 </root>

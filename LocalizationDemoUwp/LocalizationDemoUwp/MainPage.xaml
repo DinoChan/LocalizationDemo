@@ -5,6 +5,7 @@
     xmlns:local="using:LocalizationDemoUwp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resource="using:LocalizationDemoUwp.ResourceLibrary"
     mc:Ignorable="d"
     >
    
@@ -48,6 +49,7 @@
                         <Button Margin="5" Content="ShowMessage" Click="OnShowMessage"/>
                         <TextBlock x:Name="MessageElement" Margin="5"/>
                         <TextBlock x:Name="MessageFromResourceLibraryElement" Margin="5"/>
+                        <resource:MyUserControl1/>
                     </StackPanel>
                 </ScrollViewer>
             </PivotItem>

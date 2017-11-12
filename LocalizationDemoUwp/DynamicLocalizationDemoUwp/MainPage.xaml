@@ -6,12 +6,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <local:DynamicResources x:Key="DynamicResources"/>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+        <ListView x:Name="MenuListView">
+            <ListViewItem Content="{Binding Source={StaticResource DynamicResources},Path=Main}"/>
+            <ListViewItem Content="{Binding Source={StaticResource DynamicResources},Path=Settings}"/>
+        </ListView>
+        <Frame Grid.Column="1" x:Name="RootFrame" x:FieldModifier="Public"/>
     </Grid>
 </Page>

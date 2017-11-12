@@ -120,6 +120,9 @@
   <data name="Main" xml:space="preserve">
     <value>Main</value>
   </data>
+  <data name="RestartNote" xml:space="preserve">
+    <value>You must restart your app before the new setting will take effect.</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.Resources;
 using Windows.ApplicationModel.Resources.Core;
 using DynamicLocalizationDemoUwp.Annotations;
+using Windows.UI.Xaml;
 
 namespace DynamicLocalizationDemoUwp
 {
@@ -19,13 +20,10 @@ namespace DynamicLocalizationDemoUwp
 
             _defaultContextForCurrentView.QualifierValues.MapChanged += async (s, m) =>
             {
-                OnPropertyChanged("");
-                //await this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-                //{
-                //    var currentLanguage = ResourceManager.Current.MainResourceMap.GetValue("Resources/CurrentLanguage", _defaultContextForCurrentView).ValueAsString;
-                //    var message = ResourceManager.Current.MainResourceMap.GetValue("Resources1/Message", _defaultContextForCurrentView).ValueAsString;
-                //    MessageForSwitchLanguageElement.Text = message + currentLanguage;
-                //});
+                await MainPage.Current.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                {
+                    OnPropertyChanged("");
+                });
             };
             _resourceLoader = ResourceLoader.GetForCurrentView("DynamicResources");
         }

@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MainTitle.Text" xml:space="preserve">
-    <value>Welcome</value>
+  <data name="Main" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="RestartNote" xml:space="preserve">
+    <value>你的设置将在重启后生效。</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>设置</value>
   </data>
 </root>
