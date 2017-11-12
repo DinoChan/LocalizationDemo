@@ -37,7 +37,6 @@ namespace DynamicLocalizationDemoUwp
 
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
-            _hasLoaded = true;
             foreach (var item in LanguageListView.Items.OfType<ListViewItem>())
             {
                 if (item.Tag as string == ApplicationLanguages.PrimaryLanguageOverride)
