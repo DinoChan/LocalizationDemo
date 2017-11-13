@@ -43,6 +43,11 @@ namespace DynamicLocalizationDemoUwp
             get { return ResourceManager.Current.MainResourceMap.GetValue("DynamicResources/Settings", _defaultContextForCurrentView).ValueAsString; }
         }
 
+        public string RestartNote
+        {
+            get { return ResourceManager.Current.MainResourceMap.GetValue("DynamicResources/RestartNote", _defaultContextForCurrentView).ValueAsString; }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

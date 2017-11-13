@@ -93,21 +93,6 @@ namespace LocalizationDemoUwp
         private string GetAppLanguagesAsFormattedString()
         {
             return String.Join(", ", ApplicationLanguages.Languages);
-
-
-            //var context = ResourceContext.GetForCurrentView();
-
-            //var selectedLanguage = Scenario9ComboBox.SelectedValue;
-            //if (selectedLanguage != null)
-            //{
-            //    var lang = new List<string>();
-            //    lang.Add(selectedLanguage.ToString());
-            //    ApplicationLanguages.PrimaryLanguageOverride = selectedLanguage as string;
-            //    ResourceContext.GetForCurrentView().Reset();
-            //    context.Languages = lang;
-            //    var resourceStringMap = ResourceManager.Current.MainResourceMap.GetSubtree("Resources");
-            //    this.Scenario9TextBlock.Text = resourceStringMap.GetValue("string1", context).ValueAsString;
-            //}
         }
     }
 }

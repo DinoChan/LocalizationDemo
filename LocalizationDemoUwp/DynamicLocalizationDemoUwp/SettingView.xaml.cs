@@ -55,17 +55,14 @@ namespace DynamicLocalizationDemoUwp
 
             ApplicationLanguages.PrimaryLanguageOverride = item.Tag as string;
             _hasChangedLanguage = true;
-            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-            {
-                ShowNoteElement();
-            });
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, ShowNoteElement);
         }
 
         private void ShowNoteElement()
         {
-            var resourceLoader = ResourceLoader.GetForCurrentView("DynamicResources");
-            NoteElement.Text = resourceLoader.GetString("RestartNote");
             NoteElement.Visibility = Visibility.Visible;
+            var appView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
+            appView.Title = (LanguageListView.SelectedItem as ListViewItem)?.Content as string;
         }
     }
 }
