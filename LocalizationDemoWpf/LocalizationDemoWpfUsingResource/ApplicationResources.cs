@@ -25,36 +25,33 @@ namespace LocalizationDemoWpfUsingResource
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void ChangeCulture(System.Globalization.CultureInfo cultureInfo)
-        {
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Labels.Culture = cultureInfo;
-
-            RaiseProoertyChanged();
-        }
-
+       
         public void RaiseProoertyChanged()
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(""));
         }
 
+        private string _language;
 
-        private bool _useEnglish;
-
-        public bool UseEnglish
+        /// <summary>
+        /// 获取或设置 Language 的值
+        /// </summary>
+        public string Language
         {
-            get { return _useEnglish; }
+            get { return _language; }
             set
             {
-                if (_useEnglish == value)
+                if (_language == value)
                     return;
 
-                _useEnglish = value;
-                ChangeCulture(value ? new CultureInfo("en-US") : new CultureInfo("zh-CN"));
+                _language = value;
+                var cultureInfo = new CultureInfo(value);
+                Thread.CurrentThread.CurrentUICulture = cultureInfo;
+                Thread.CurrentThread.CurrentCulture = cultureInfo;
+                Labels.Culture = cultureInfo;
+
+                RaiseProoertyChanged();
             }
         }
-
-
     }
 }

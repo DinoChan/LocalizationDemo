@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:LocalizationDemoWpfUsingResource"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <local:ApplicationResources x:Key="R"  UseEnglish="False"/>
+        <local:ApplicationResources x:Key="R"  Language="zh-CN"/>
     </Application.Resources>
 </Application>
