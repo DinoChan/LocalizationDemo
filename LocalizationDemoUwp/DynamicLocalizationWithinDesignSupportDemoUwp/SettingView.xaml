@@ -1,14 +1,12 @@
 ﻿<Page
-    x:Class="DynamicLocalizationDemoUwp.SettingView"
+    x:Class="DynamicLocalizationWithinDesignSupportDemoUwp.SettingView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:DynamicLocalizationDemoUwp"
+    xmlns:local="using:DynamicLocalizationWithinDesignSupportDemoUwp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Page.Resources>
-        <local:DynamicResources x:Key="DynamicResources"/>
-    </Page.Resources>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
             <ListView x:Name="LanguageListView" Margin="10">
@@ -16,8 +14,7 @@
                 <ListViewItem Tag="en-US" Content="English"/>
             </ListView>
             <TextBlock x:Name="NoteElement" Foreground="#FFF99F00" Margin="10" Visibility="Collapsed"
-                       Text="{Binding RestartNote,Source={StaticResource DynamicResources}}"
-                       />
+                       Text="{Binding DynamicResources[RestartNote],Source={StaticResource R}}"/>
         </StackPanel>
     </Grid>
 </Page>

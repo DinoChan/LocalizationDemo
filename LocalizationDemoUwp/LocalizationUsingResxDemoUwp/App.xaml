@@ -1,0 +1,11 @@
+﻿<Application
+    x:Class="LocalizationUsingResxDemoUwp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LocalizationUsingResxDemoUwp"
+    xmlns:classLib="using:LocalizationUsingResxDemoUwp.ClassLibrary"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <classLib:ApplicationResources x:Key="R"/>
+    </Application.Resources>
+</Application>
