@@ -31,8 +31,7 @@ namespace LocalizationDemoWpfUsingResource
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Labels.Culture = cultureInfo;
 
-            if (Current != null)
-                Current.RaiseProoertyChanged();
+            RaiseProoertyChanged();
         }
 
         public void RaiseProoertyChanged()
