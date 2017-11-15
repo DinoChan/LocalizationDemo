@@ -44,14 +44,14 @@ namespace LocalizationDemoUwp
             //var str = loader.GetString("CurrentLanguadge");
             var resourceLoader = ResourceLoader.GetForCurrentView();
             var currentLanguage = resourceLoader.GetString("CurrentLanguage");
-            resourceLoader = ResourceLoader.GetForCurrentView("Resources1");
+            resourceLoader = ResourceLoader.GetForCurrentView("OtherResources");
             var message = resourceLoader.GetString("Message");
             MessageElement.Text = message + currentLanguage;
 
 
             resourceLoader = ResourceLoader.GetForCurrentView("LocalizationDemoUwp.ResourceLibrary/Resources");
             currentLanguage = resourceLoader.GetString("CurrentLanguage");
-            resourceLoader = ResourceLoader.GetForCurrentView("LocalizationDemoUwp.ResourceLibrary/Resources1");
+            resourceLoader = ResourceLoader.GetForCurrentView("LocalizationDemoUwp.ResourceLibrary/OtherResources");
             message = resourceLoader.GetString("Message");
             MessageFromResourceLibraryElement.Text = message + currentLanguage;
 

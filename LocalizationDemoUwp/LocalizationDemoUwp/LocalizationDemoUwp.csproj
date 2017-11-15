@@ -115,8 +115,8 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="LocalizationDemoUwp_TemporaryKey.pfx" />
-    <PRIResource Include="Strings\zh-CN\Resources1.resw" />
-    <PRIResource Include="Strings\en-US\Resources1.resw" />
+    <PRIResource Include="Strings\zh-CN\OtherResources.resw" />
+    <PRIResource Include="Strings\en-US\OtherResources.resw" />
     <PRIResource Include="Strings\zh-CN\Resources.resw" />
     <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>

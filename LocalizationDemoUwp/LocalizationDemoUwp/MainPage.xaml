@@ -18,6 +18,7 @@
                     <StackPanel x:Uid="LayoutRoot" >
                         <TextBox x:Uid="UsernameTextBox" Margin="5" Header="test" />
                         <TextBox x:Uid="UsernameTextBox" Margin="5" Header="test"/>
+                        <TextBox x:Uid="/OtherResources/AddressTextBox" Margin="5" Header="test"/>
                         <ToggleSwitch OnContent="test on content" OffContent="test off content" Header="test" Margin="5" x:Uid="SexButton"/>
                         <TextBlock Text="test current language content" x:Uid="CurrentLanguageElement" Margin="5">
                             <TextBlock.Foreground>

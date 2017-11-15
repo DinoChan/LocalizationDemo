@@ -31,7 +31,7 @@ namespace LocalizationDemoUwp
                 await this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                 {
                     var currentLanguage = ResourceManager.Current.MainResourceMap.GetValue("Resources/CurrentLanguage", _defaultContextForCurrentView).ValueAsString;
-                    var message = ResourceManager.Current.MainResourceMap.GetValue("Resources1/Message", _defaultContextForCurrentView).ValueAsString;
+                    var message = ResourceManager.Current.MainResourceMap.GetValue("OtherResources/Message", _defaultContextForCurrentView).ValueAsString;
                     MessageForSwitchLanguageElement.Text = message + currentLanguage;
                 });
             };
