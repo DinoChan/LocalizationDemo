@@ -9,8 +9,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Uid="MainTitle"  FontSize="30"/>
-            <TextBox/>
+            <TextBlock x:Uid="MainTitle"  FontSize="30" HorizontalAlignment="Center"/>
+            <TextBox Width="200" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>

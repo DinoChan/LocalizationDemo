@@ -47,7 +47,7 @@
                             </ListView>
                         </Grid>
 
-                        <Button Margin="5" Content="ShowMessage" Click="OnShowMessage"/>
+                        <Button Margin="5" x:Uid="ShowMessageButton" Click="OnShowMessage" local:ButtonEx.Content="ssssss"/>
                         <TextBlock x:Name="MessageElement" Margin="5"/>
                         <TextBlock x:Name="MessageFromResourceLibraryElement" Margin="5"/>
                         <resource:MyUserControl1/>

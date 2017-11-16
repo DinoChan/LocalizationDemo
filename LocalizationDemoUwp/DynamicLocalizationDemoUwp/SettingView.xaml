@@ -15,7 +15,7 @@
                 <ListViewItem Tag="zh-Hans-CN" Content="中文"/>
                 <ListViewItem Tag="en-US" Content="English"/>
             </ListView>
-            <TextBlock x:Name="NoteElement" Foreground="#FFF99F00" Margin="10" Visibility="Collapsed"
+            <TextBlock x:Name="NoteElement" Foreground="#FFF99F00" Margin="20,10" Visibility="Collapsed"
                        Text="{Binding RestartNote,Source={StaticResource DynamicResources}}"
                        />
         </StackPanel>

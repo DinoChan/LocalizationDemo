@@ -153,6 +153,9 @@
   <data name="SexButton.OnContent" xml:space="preserve">
     <value>男</value>
   </data>
+  <data name="ShowMessageButton.[using:LocalizationDemoUwp]ButtonEx.Content" xml:space="preserve">
+    <value>显示消息</value>
+  </data>
   <data name="StringToReplace" xml:space="preserve">
     <value>Replace</value>
   </data>
