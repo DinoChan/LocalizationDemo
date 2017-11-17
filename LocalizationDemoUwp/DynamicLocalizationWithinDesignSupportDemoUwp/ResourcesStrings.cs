@@ -7,10 +7,8 @@ using Windows.ApplicationModel.Resources;
 
 namespace DynamicLocalizationWithinDesignSupportDemoUwp
 {
-  public  class ResourcesStrings
+    public class ResourcesStrings
     {
-       
-
         public string this[string key]
         {
             get
