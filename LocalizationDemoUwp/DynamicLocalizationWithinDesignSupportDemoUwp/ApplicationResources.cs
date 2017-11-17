@@ -14,13 +14,6 @@ namespace DynamicLocalizationWithinDesignSupportDemoUwp
         {
             DynamicResources = new DynamicResourcesStrings();
             Resources = new ResourcesStrings();
-            //ApplicationLanguages.PrimaryLanguageOverride ="en-US";
-            //_defaultContextForCurrentView = ResourceContext.GetForCurrentView();
-
-            //_defaultContextForCurrentView.QualifierValues.MapChanged += async (s, m) =>
-            //{
-            //    await MainPage.Current.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => { OnPropertyChanged(""); });
-            //};
             Current = this;
         }
 
@@ -28,12 +21,9 @@ namespace DynamicLocalizationWithinDesignSupportDemoUwp
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private readonly ResourceContext _defaultContextForCurrentView;
-
         public DynamicResourcesStrings DynamicResources { get; }
 
         public ResourcesStrings Resources { get; }
-
 
         public string Language
         {
@@ -58,7 +48,5 @@ namespace DynamicLocalizationWithinDesignSupportDemoUwp
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-
     }
 }

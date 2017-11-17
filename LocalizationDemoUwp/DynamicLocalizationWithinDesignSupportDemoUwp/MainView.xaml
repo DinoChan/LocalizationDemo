@@ -6,11 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <local:ResourcesStrings x:Key="S"/>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="{Binding Resources[MainTitle], Source={StaticResource R}}"  FontSize="30"/>
-            <TextBox/>
+            <TextBlock Text="{Binding Resources[MainTitle], Source={StaticResource R}}"  FontSize="30" HorizontalAlignment="Center" Margin="10"/>
+            <TextBox Width="200" HorizontalAlignment="Center" Margin="10"/>
+            <TextBlock Text="{Binding Source={StaticResource S},Path=[MainTitle]}" FontSize="30" HorizontalAlignment="Center" Margin="10"/>
         </StackPanel>
     </Grid>
 </Page>
