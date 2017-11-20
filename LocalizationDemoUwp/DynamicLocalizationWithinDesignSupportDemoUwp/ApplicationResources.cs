@@ -25,7 +25,6 @@ namespace DynamicLocalizationWithinDesignSupportDemoUwp
 
         public ResourcesStrings Resources { get; }
 
-
         public string Language
         {
             get
@@ -49,7 +48,5 @@ namespace DynamicLocalizationWithinDesignSupportDemoUwp
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-
     }
 }
