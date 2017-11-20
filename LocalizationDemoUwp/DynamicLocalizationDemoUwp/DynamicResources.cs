@@ -25,12 +25,9 @@ namespace DynamicLocalizationDemoUwp
                     OnPropertyChanged("");
                 });
             };
-            _resourceLoader = ResourceLoader.GetForCurrentView("DynamicResources");
         }
 
         private ResourceContext _defaultContextForCurrentView;
-
-        private ResourceLoader _resourceLoader;
 
         public string Main
         {

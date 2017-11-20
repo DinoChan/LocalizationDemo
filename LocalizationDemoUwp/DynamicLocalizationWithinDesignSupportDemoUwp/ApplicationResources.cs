@@ -14,21 +14,12 @@ namespace DynamicLocalizationWithinDesignSupportDemoUwp
         {
             DynamicResources = new DynamicResourcesStrings();
             Resources = new ResourcesStrings();
-            //ApplicationLanguages.PrimaryLanguageOverride ="en-US";
-            //_defaultContextForCurrentView = ResourceContext.GetForCurrentView();
-
-            //_defaultContextForCurrentView.QualifierValues.MapChanged += async (s, m) =>
-            //{
-            //    await MainPage.Current.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => { OnPropertyChanged(""); });
-            //};
             Current = this;
         }
 
         public static ApplicationResources Current { get; private set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
-        private readonly ResourceContext _defaultContextForCurrentView;
 
         public DynamicResourcesStrings DynamicResources { get; }
 
