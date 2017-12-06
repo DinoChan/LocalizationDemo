@@ -54,7 +54,8 @@
                         </LinearGradientBrush>
                     </TextBlock.Foreground>
                 </TextBlock>
-            </Grid>
+                <!--<Grid   Height="{x:Static local:Labels.Height}" Background="{x:Static local:Labels.Background}"/>-->
+                </Grid>
         </TabItem>
         <TabItem Header="使用Dll">
             <local:UsingDllView/>

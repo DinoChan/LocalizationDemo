@@ -132,6 +132,9 @@
   <data name="Flag" xml:space="preserve">
     <value>/LocalizationDemoWpfUsingResource;component/Flag_of_the_United_States.svg.png</value>
   </data>
+  <data name="Height" xml:space="preserve">
+    <value>100</value>
+  </data>
   <data name="Infomation" xml:space="preserve">
     <value>Open the Control Panel, and select Clock, Language, and Region &gt; Language.
 Note that the language that was displayed when you ran the app is the top language listed that is English, German, or French. If your top language is not one of these three, the app falls back to the next one on the list that the app supports.</value>

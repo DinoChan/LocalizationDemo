@@ -132,6 +132,9 @@
   <data name="Flag" xml:space="preserve">
     <value>/LocalizationDemoWpfUsingResource;component/Flag_of_the_People's_Republic_of_China.svg.png</value>
   </data>
+  <data name="Height" xml:space="preserve">
+    <value>10</value>
+  </data>
   <data name="Infomation" xml:space="preserve">
     <value>打开控制面板，选择“时钟、语言和区域”&gt;Language“语言”。
 请注意，运行应用时显示的语言是列出的最顶端语言，即英语、德语或法语。如果你的最顶端语言不是这三者之一，则应用将采用应用支持的语言列表中的下一种语言。</value>
