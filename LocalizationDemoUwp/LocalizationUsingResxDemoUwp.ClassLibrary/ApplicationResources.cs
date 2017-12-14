@@ -18,6 +18,8 @@ namespace LocalizationUsingResxDemoUwp.ClassLibrary
             Labels = new Labels();
             if (string.IsNullOrWhiteSpace(ApplicationLanguages.PrimaryLanguageOverride) == false)
                 Language = ApplicationLanguages.PrimaryLanguageOverride;
+            else
+                Language = Windows.System.UserProfile.GlobalizationPreferences.Languages.FirstOrDefault();
 
             Current = this;
         }
