@@ -5,6 +5,7 @@
     xmlns:local="using:LocalizationUsingResxDemoUwp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:resource="using:LocalizationUsingResxDemoUwp.ClassLibrary"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -19,6 +20,7 @@
                 <TextBlock x:Name="LanguageElement"/>
             </StackPanel>
             <TextBox Header="{Binding Source={StaticResource R},Path=Labels.Username}" Margin="5"/>
+            <TextBlock Text="{x:Bind resource:ApplicationResources.Current.Language}"/>
         </StackPanel>
     </Grid>
 </Page>
